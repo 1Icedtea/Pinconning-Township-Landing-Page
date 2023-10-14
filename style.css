@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Open+Sans:wght@300;400&family=Oxygen:wght@300;400;700&family=Raleway:wght@100;200;300;400;500;700&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+
+:root {
+  --primary-color: #0d5619;
+  --secondary-color: #fff;
+  --complimentary-blue: #114b5f;
+  --bluer-white: #f6f9fa;
+  --brand-main-logo: normal 700 36px 'Ubuntu', sans-serif;
+  --brand-main--logo-sub: normal 400 14px 'Oxygen', sans-serif;
+  --upper-nav-links: normal 300 14px 'Open Sans', sans-serif;
+  --main-nav-links: normal 700 18px 'Ubuntu', sans-serif;
+  --hero-section-heading: 72px;
+  --hero-section-subheading: 24px;
+  --news-heading: normal 700 48px 'Ubuntu', sans-serif;
+  --news-date: normal 700 14px 'Oxygen', sans-serif;
+  --news-title: var(--main-nav-links);
+  --events-heading: var(--news-heading);
+  --events-subheading: var(--main-nav-links);
+  --c2a-button: normal 300 13px 'Ubuntu', sans-serif;
+  --footer-brand-heading: normal 700 24px 'Ubuntu', sans-serif;
+  --footer-brand-subheading: normal 500 14px 'Ubuntu', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+
+body {
+  font: normal 300 14px 'Open Sans', sans-serif;
+}
+
+.navbar {
+  background-color: #fff;
+  padding: .2rem 0 .2rem 10rem;
+  font-family: 'Open Sans';
+  font-weight: 300;
+}
+
+.navbar-nav li a {
+  font: normal 500 13px 'Open Sans', sans-serif;
+  color: var(--primary-color);
+}
+
+.navbar-nav li a:hover {
+  color: var(--secondary-color);
+}
+
+.nav-link:active {
+  color: var(--secondary-color)!important;
+}
+
+.navbar-brand {
+  padding: 1em 2em 1em 1em;
+  font: var(--brand-main-logo);
+  color: var(--primary-color)!important;
+}
+
+.nav-subheading {
+  font: var(--brand-main--logo-sub);
+  color: #919191;
+}
+
+.search-bar {
+  border: none!important;
+  color: var(--white)!important;
+  border-radius: 100px!important;
+  background-color: #e2e2e2!important;
+}
+
+.search-bar::placeholder {
+  color: var(--white)!important;
+}
+
+form .btn-link {
+  color: var(--white)!important;
+  text-decoration: none;
+}
+
+/* !        🤖 Hero Section             */
+
+.hero-section {
+  height: 100vh;
+}
+
+.welcome-header {
+  width: 100%;
+  position: absolute;
+  top: 18em;
+  padding: 5em;
+}
+
+.welcome-header h1 {
+  font: var(--brand-main-logo);
+  font-size: var(--hero-section-heading);
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.wh-subheading {
+  font: var(--brand-main--logo-sub);
+  font-size: var(--hero-section-subheading);
+  font-weight: 700;
+  color: #f3e9d2;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+
+/* *                      📰 News Section 📰                     */
+
+.recent-news-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recent-news-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.news-img-container {
+  background-color: grey;
+  aspect-ratio: 4/3;
+  width: 300px;
+  background-size: contain;
+}
+
+.news-cards {
+  display: flex;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.news-heading {
+  font: var(--news-heading);
+  color: var(--primary-color);
+}
+
+.news-date {
+  font: var(--news-date);
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+.news-title {
+  font: var(--news-title);
+  color: #010203 ;
+  text-align: left;
+}
+
+.callToAction-btn {
+  border: none;
+  background: var(--complimentary-blue);
+  color: #fff;
+  padding: 12px 18px;
+  font: var(--c2a-button);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+
+
+
+
+
+@media only screen and (min-width: 1200px) {
+
+}
+
+@media only screen and (min-width: 992px) {
+  .quicklink-fb {
+    opacity: 1!important;
+  }
+
+/* *                      📰 News Section 📰                     */
+
+  .recent-news-container {
+    height: 76vh;
+  }
+
+  .recent-news-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .news-heading {
+    
+  }
+
+  .news-cards {
+    gap: 1em;
+  }
+  
+  .card-container {
+    width: 300px;
+    gap: 1em;
+  }
+
+  .card-content {
+    width: 80%;
+  }
+
+  .news-date {
+    line-height: 36px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar-collapse {
+    height: 0!important;
+    position: relative!important;
+  }
+  
+  .top-nav {
+    display: flex;
+    position: absolute;
+    background-color: var(--primary-color)!important;
+    height: 3em;
+    left: 0;
+    top: 0;
+    align-items: center;
+  }
+
+  .top-nav-container {
+    display: block!important;
+  }
+  
+  .top-nav-container ul li a {
+    color: var(--secondary-color);
+  }
+
+  .bottom-nav {
+    margin-top: 3em;
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .second-nav {
+    display: none!important;
+  }
+
+  .quicklink-fb {
+
+    background: #2c8bec;
+    color: #fff;
+    letter-spacing: 3px;
+    /* margin-right: 2em; */
+    opacity: 0;
+  }
+
+  .quicklink-text {
+    font: normal 600 12px 'Raleway', sans-serif;
+    text-transform: uppercase;
+  }
+
+  .top-nav-list {
+    width: 100vw;
+    padding: 0 2em 0 2em;
+  }
+
+  button[type="submit"] {
+    text-indent: -85px;
+    /* overflow: hidden; */
+    width: 40px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  
+  button[type="submit"]:hover {
+    opacity: 1;
+  }
+ 
+  button[type="submit"]:focus,
+  input[type="search"]:focus {
+    box-shadow: 0 0 3px 0 #1183d6;
+    border-color: #1183d6;
+    outline: none;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .container-fluid .top-nav {
+    display: none;
+  }
+
+  .bottom-nav {
+    padding-top: 0;
+  }
+
+  .top-nav-container {
+    display: none;
+  }
+
+  .navbar-collapse {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: #fff;
+    top: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+  }
+
+  .next-button {
+    opacity: 0;
+    transition: ease-in 1.2s;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    left: 26em;
+    top: 46vh;
+  }
+
+  .navbar-nav li a {
+    text-shadow: 8px 8px 9px rgba(98,94,94,0.59);
+  }
+
+  .first-nav {
+    transition: all ease-in .3s;
+    position: absolute;
+    opacity: 1;
+  }
+
+  .second-nav {
+    display: block;
+    transition: all ease-in .3s;
+    position: absolute;
+    left: -4em;
+  }
+
+  .next-button img {
+    transition: rotate .3s ease-in;
+  }
+}
