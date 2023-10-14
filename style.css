@@ -166,10 +166,48 @@ form .btn-link {
   letter-spacing: 4px;
 }
 
+/*TODO:           📩 Events Section 📩            */
 
+.upcoming-events-container {
+  display: flex;
+  gap: 1em;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  margin-bottom: 2em;
+  background-color: var(--bluer-white);
+}
 
+.events-img-container {}
 
+.events-content-wrapper { 
+  display: flex;
+  flex-direction: column; 
+  gap: 2em;
+}
 
+.events-heading { font: var(--events-heading); color: var(--primary-color);}
+
+.events-content {
+  display: flex;
+  gap: 1em;
+}
+
+.events-date {
+  background-color: var(--primary-color);
+  font: var(--footer-brand-subheading);
+  font-size: 14px;
+  color: #fff;
+  display: inline-grid;
+  align-content: center;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 14px;
+}
+
+.date-num { font: var(--events-subheading);font-size: 24px; }
+
+.events-text { font: var(--events-subheading);}
 
 @media only screen and (min-width: 1200px) {
 
@@ -210,6 +248,17 @@ form .btn-link {
 
   .news-date {
     line-height: 36px;
+  }
+
+  /*TODO:           📩 Events Section 📩            */
+
+  .events-content-wrapper {
+    width: 40%;
+  }
+
+  .events-date {
+    width: 60px;
+    height: 60px;
   }
 }
 
