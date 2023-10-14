@@ -6,6 +6,7 @@
   --secondary-color: #fff;
   --complimentary-blue: #114b5f;
   --bluer-white: #f6f9fa;
+  --richer-black: #010203;
   --brand-main-logo: normal 700 36px 'Ubuntu', sans-serif;
   --brand-main--logo-sub: normal 400 14px 'Oxygen', sans-serif;
   --upper-nav-links: normal 300 14px 'Open Sans', sans-serif;
@@ -40,12 +41,12 @@ body {
 }
 
 .navbar-nav li a {
-  font: normal 500 13px 'Open Sans', sans-serif;
-  color: var(--primary-color);
+  font: normal 700 13px 'Ubuntu', sans-serif;
+  color: var(--richer-black);
 }
 
 .navbar-nav li a:hover {
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 .nav-link:active {
@@ -68,6 +69,7 @@ body {
   color: var(--white)!important;
   border-radius: 100px!important;
   background-color: #e2e2e2!important;
+  font-size: 11px!important;
 }
 
 .search-bar::placeholder {
@@ -152,7 +154,7 @@ form .btn-link {
 
 .news-title {
   font: var(--news-title);
-  color: #010203 ;
+  color: var(--richer-black) ;
   text-align: left;
 }
 
@@ -178,18 +180,13 @@ form .btn-link {
   background-color: var(--bluer-white);
 }
 
-.events-img-container {}
-
-.events-content-wrapper { 
-  display: flex;
-  flex-direction: column; 
+.events-content-wrapper { display: flex;flex-direction: column; 
   gap: 2em;
 }
 
 .events-heading { font: var(--events-heading); color: var(--primary-color);}
 
-.events-content {
-  display: flex;
+.events-content { display: flex;
   gap: 1em;
 }
 
@@ -209,13 +206,56 @@ form .btn-link {
 
 .events-text { font: var(--events-subheading);}
 
-@media only screen and (min-width: 1200px) {
+/* !                          👣 Footer Section 👣                                    */
 
+footer {
+  height: 15vh;
+  background-color: var(--primary-color);
+  color: #fcfcfc;
+  gap: 10em;
+}
+
+.brand-name {
+  text-transform: uppercase;
+  font: var(--footer-brand-heading);
+  color: #fff;
+}
+
+.company-address {
+  font: var(--footer-brand-subheading);
+}
+
+.site-engine {
+  font: var(--footer-brand-subheading);
+}
+
+.login-link {
+  text-decoration: none;
+  color: #fcfcfc;
+}
+
+@media only screen and (min-width: 1200px) {
+  .quicklink-fb {
+    margin-right: 8em;
+  }
 }
 
 @media only screen and (min-width: 992px) {
+  .top-nav-container>.navbar-nav>.nav-item>a.nav-link {
+    font-size: 13px!important;
+  }
+  
+  .nav-quick-links {
+    display: list-item!important;
+  }
+  
   .quicklink-fb {
     opacity: 1!important;
+    margin-right: 1em;
+  }
+
+  .first-nav > .navbar-nav {
+    gap: 1em;
   }
 
 /* *                      📰 News Section 📰                     */
@@ -227,10 +267,6 @@ form .btn-link {
   .recent-news-wrapper {
     flex-direction: column;
     align-items: center;
-  }
-
-  .news-heading {
-    
   }
 
   .news-cards {
@@ -284,6 +320,14 @@ form .btn-link {
   
   .top-nav-container ul li a {
     color: var(--secondary-color);
+  }
+
+  .top-nav-container>.navbar-nav>.nav-item>a.nav-link {
+    font-size: 11px;
+  }
+
+  .nav-quick-links {
+    display: none;
   }
 
   .bottom-nav {
@@ -375,7 +419,8 @@ form .btn-link {
     top: 46vh;
   }
 
-  .navbar-nav li a {
+  .navbar-nav li a:hover {
+    transition: ease all .3s;
     text-shadow: 8px 8px 9px rgba(98,94,94,0.59);
   }
 
