@@ -85,6 +85,7 @@ form .btn-link {
 
 .hero-section {
   height: 100vh;
+  background: url(assets/photo-carousel.png);
 }
 
 .welcome-header {
@@ -128,7 +129,6 @@ form .btn-link {
   background-color: grey;
   aspect-ratio: 4/3;
   width: 300px;
-  background-size: contain;
 }
 
 .news-cards {
@@ -139,6 +139,8 @@ form .btn-link {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #fff;
+  border-radius: 5px;
 }
 
 .news-heading {
@@ -162,7 +164,7 @@ form .btn-link {
   border: none;
   background: var(--complimentary-blue);
   color: #fff;
-  padding: 12px 18px;
+  padding: 16px 38px;
   font: var(--c2a-button);
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -174,7 +176,7 @@ form .btn-link {
   display: flex;
   gap: 1em;
   flex-direction: row;
-  align-content: center;
+  align-items: center;
   justify-content: center;
   margin-bottom: 2em;
   background-color: var(--bluer-white);
@@ -205,6 +207,10 @@ form .btn-link {
 .date-num { font: var(--events-subheading);font-size: 24px; }
 
 .events-text { font: var(--events-subheading);}
+
+#eventsBtn {
+  align-self: flex-start;
+}
 
 /* !                          👣 Footer Section 👣                                    */
 
@@ -238,6 +244,10 @@ footer {
   .quicklink-fb {
     margin-right: 8em;
   }
+
+  .news-cards {
+    gap: 2em;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -267,6 +277,7 @@ footer {
   .recent-news-wrapper {
     flex-direction: column;
     align-items: center;
+    gap: 2em;
   }
 
   .news-cards {
@@ -287,6 +298,9 @@ footer {
   }
 
   /*TODO:           📩 Events Section 📩            */
+  .upcoming-events-container {
+    height: 34rem;
+  }
 
   .events-content-wrapper {
     width: 40%;
@@ -382,6 +396,10 @@ footer {
     box-shadow: 0 0 3px 0 #1183d6;
     border-color: #1183d6;
     outline: none;
+  }
+
+  .news-cards {
+    height: 24em;
   }
 }
 
