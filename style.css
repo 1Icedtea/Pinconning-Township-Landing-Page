@@ -240,6 +240,74 @@ footer {
   color: #fcfcfc;
 }
 
+/* *            🔼 Tiny Slider 🔼               */
+
+.page-dock {
+  position: absolute;
+  bottom: 0;
+  padding-top: 7em;
+  height: 8em;
+  /* border: dotted 2px aqua; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 14px;
+  z-index: 99;
+}
+
+.my-slider {
+  display: flex;
+  align-items: center;
+  height: 130px;
+  background-color: #fff;
+  border-top: solid 2px #88d498;
+  font: normal 700 14px 'Ubuntu', sans-serif;
+}
+
+.slider-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: dotted 2px orange; */
+  height: 4em;
+  width: 3em;
+}
+
+.slider-content a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+}
+
+.my-slider .slider-icon {
+  color: var(--primary-color);
+}
+
+.controlsElement {
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+
+.controlsSelector {
+  border: none;
+  padding: 16px;
+  border-radius: 2px;
+  font-size: 24px;
+  background: var(--primary-color);
+  color: #fff;
+  position: absolute;
+}
+
+#left-selector {
+  right: 18.5em;
+}
+
+#right-selector {
+  left: 18.5em;
+}
+
 @media only screen and (min-width: 1200px) {
   .quicklink-fb {
     margin-right: 8em;
@@ -247,6 +315,10 @@ footer {
 
   .news-cards {
     gap: 2em;
+  }
+
+  .recent-news-wrapper {
+    margin-top: 4em;
   }
 }
 
@@ -266,6 +338,12 @@ footer {
 
   .first-nav > .navbar-nav {
     gap: 1em;
+  }
+
+/* *                🔼 Tiny Slider 🔼                   */
+
+  .page-dock {
+    padding-top: 7em;
   }
 
 /* *                      📰 News Section 📰                     */

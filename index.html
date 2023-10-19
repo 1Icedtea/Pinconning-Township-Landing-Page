@@ -6,9 +6,12 @@
   <title>Pinconning Township</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
   <script src="https://kit.fontawesome.com/1e9beea7da.js" crossorigin="anonymous"></script>
 </head>
 <body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+
   <nav class="navbar navbar-expand-md fixed-top shadow-lg" data-bs-theme="light">
     <div class="container-fluid top-nav">
       <div class="top-nav-container">
@@ -91,11 +94,69 @@
       <span class="wh-subheading">Welcome To <br /></span>
       <h1>Pinconning <br /> Township</h1>
     </header>
-  </section>
 
-  <div class="page-dock"></div>
+
+    <div class="page-dock w-100">
+      <div class="my-slider">
+        <div class="slider-item">
+          <div class="slider-content">
+            <a href="#MinutesAgendas">
+              <span class="slider-icon">
+                <i class="fa-solid fa-clipboard-list"></i>
+              </span>
+              Minutes & Agendas
+            </a>
+          </div>
+        </div>
+        <div class="slider-item">
+          <div class="slider-content">
+            <a href="#DocCenter">
+              <span class="slider-icon">
+                <i class="fa-solid fa-folder"></i>
+              </span>
+              Document Center
+            </a>
+          </div>
+        </div>
+        <div class="slider-item">
+          <div class="slider-content">
+            <a href="#TownshipDept">
+              <span class="slider-icon">
+                <i class="fa-solid fa-folder"></i>
+              </span>
+              Township Departments
+            </a>
+          </div>
+        </div>
+        <div class="slider-item">
+          <div class="slider-content">
+            <a href="#JobOps">
+              <span class="slider-icon">
+                <i class="fa-solid fa-users"></i>
+              </span>
+              Job Opportunities
+            </a>
+          </div>
+        </div>
+        <div class="slider-item">
+          <div class="slider-content">
+            <a href="#News">
+              <span class="slider-icon">
+                <i class="fa-solid fa-newspaper"></i>
+              </span>
+              Recent News
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="controlsElement">
+        <button class="controlsSelector" id="left-selector"><i class="fa-solid fa-angle-left"></i></button>
+        <button class="controlsSelector" id="right-selector"><i class="fa-solid fa-angle-right"></i></button>
+      </div>
+    </div>
+  </section>
   
-  <section class="recent-news-container" style="background: url(assets/clearer-dot-gradient.png);background-position: right;background-size: cover;">
+  <section class="recent-news-container" style="background: url(assets/dot-gradient.png);background-position: right;background-size: cover;">
 
     <div class="recent-news-wrapper">
       <h3 class="news-heading">Recent News</h3>
@@ -158,7 +219,16 @@
     </div>
   </footer>
 
-
+<script>
+  var slider = tns({
+    container: '.my-slider',
+    items: 4,
+    controlsContainer: ".controlsElement",
+    prevButton: "#left-selector",
+    nextButton: "#right-selector",
+    nav: false,
+  });
+</script>
 <script>
   document.getElementById("toggleNav").addEventListener("click", addNextBtn);
   document.getElementById("nextNav").addEventListener("click", slideNav);
@@ -185,6 +255,5 @@
   
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js" integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
 </body>
 </html>
