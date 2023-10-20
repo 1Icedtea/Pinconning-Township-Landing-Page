@@ -13,7 +13,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 
   <nav class="navbar navbar-expand-md fixed-top shadow-lg" data-bs-theme="light">
-    <div class="container-fluid top-nav">
+    <div class="container top-nav">
       <div class="top-nav-container">
         <ul class="navbar-nav d-flex px-3 align-items-center top-nav-list">
           <li class="nav-item">
@@ -33,7 +33,7 @@
         </ul>
       </div>
     </div>
-    <div class="container-fluid bottom-nav">
+    <div class="container bottom-nav">
       <a class="navbar-brand z-1 d-flex flex-column" href="#">
         PINCONNING
         <span class="nav-subheading">Township, MI</span>
@@ -96,7 +96,7 @@
     </header>
 
 
-    <div class="page-dock w-100">
+    <div class="page-dock container">
       <div class="my-slider">
         <div class="slider-item">
           <div class="slider-content">
@@ -122,7 +122,7 @@
           <div class="slider-content">
             <a href="#TownshipDept">
               <span class="slider-icon">
-                <i class="fa-solid fa-folder"></i>
+                <i class="fa-solid fa-building-columns"></i>
               </span>
               Township Departments
             </a>
@@ -223,10 +223,20 @@
   var slider = tns({
     container: '.my-slider',
     items: 4,
+    gutter: 1,
+    edgePadding: 30,
     controlsContainer: ".controlsElement",
     prevButton: "#left-selector",
     nextButton: "#right-selector",
     nav: false,
+    responsive: {
+      1120: {
+        items: 3,
+      },
+      1200: {
+        items: 4,
+      }
+    }
   });
 </script>
 <script>
