@@ -6,11 +6,14 @@
   <title>Pinconning Township</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
   <script src="https://kit.fontawesome.com/1e9beea7da.js" crossorigin="anonymous"></script>
 </head>
 <body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+
   <nav class="navbar navbar-expand-md fixed-top shadow-lg" data-bs-theme="light">
-    <div class="container-fluid top-nav">
+    <div class="container top-nav">
       <div class="top-nav-container">
         <ul class="navbar-nav d-flex px-3 align-items-center top-nav-list">
           <li class="nav-item">
@@ -30,7 +33,7 @@
         </ul>
       </div>
     </div>
-    <div class="container-fluid bottom-nav">
+    <div class="container bottom-nav">
       <a class="navbar-brand z-1 d-flex flex-column" href="#">
         PINCONNING
         <span class="nav-subheading">Township, MI</span>
@@ -85,80 +88,139 @@
       </div>
     </div>
   </nav>
+  <main>
+    <section class="hero-section" style="background-color: #010203;background-size: cover;background-repeat: no-repeat;">
+      <header class="welcome-header">
+        <span class="wh-subheading">Welcome To <br /></span>
+        <h1>Pinconning <br /> Township</h1>
+      </header>
+      <div class="page-dock container">
+        <div class="my-slider">
+          <div class="slider-item">
+            <div id="slider-content">
+              <div id="slider-content-link">
+                <a href="#">
+                  <span class="slider-icon"><i class="fa-solid fa-clipboard-list"></i></span>
+                  Minutes & Agendas
+                </a>
+              </div>
+              <div id="slider-content-link">
+                <a href="#">
+                  <span class="slider-icon"><i class="fa-solid fa-folder"></i></span>
+                  Document Center
+                </a>
+              </div>
+              <div id="slider-content-link">
+                <a href="#">
+                  <span class="slider-icon"><i class="fa-solid fa-building-columns"></i></span>
+                  Township Departments
+                </a>
+              </div>
+              <div id="slider-content-link">
+                <a href="#">
+                  <span class="slider-icon"><i class="fa-solid fa-users"></i></span>
+                  Job Opportunities
+                </a>
+              </div>
+              <div id="slider-content-link">
+                <a href="#">
+                  <span class="slider-icon"><i class="fa-solid fa-folder"></i></span>
+                  Link
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section class="hero-section" style="background-color: #010203;background-size: cover;background-repeat: no-repeat;">
-    <header class="welcome-header">
-      <span class="wh-subheading">Welcome To <br /></span>
-      <h1>Pinconning <br /> Township</h1>
-    </header>
-  </section>
-
-  <div class="page-dock"></div>
+    <section class="recent-news-container" style="background: url(assets/dot-gradient.png);background-position: right;background-size: cover;">
+      <div class="recent-news-wrapper">
+        <h3 class="news-heading">Recent News</h3>
+        <div class="news-cards">
+          <div class="card-container shadow-sm">
+            <div class="news-img-container" style="background: url(assets/recent-news.png);background-size: cover;background-repeat: no-repeat;"></div>
+            <div class="card-content">
+              <span class="news-date">Jan 6, 2020</span>
+              <p class="news-title">Offices Closed Due to Weather</p>
+            </div>
+          </div>
+          <div class="card-container shadow-sm">
+            <div class="news-img-container" style="background: url(assets/recent-news-1.png);background-size: cover;background-repeat: no-repeat;"></div>
+            <div class="card-content">
+              <span class="news-date">Jan 3, 2020</span>
+              <p class="news-title">Township Awards Ceremony Information</p>
+            </div>
+          </div>
+          <div class="card-container shadow-sm">
+            <div class="news-img-container" style="background: url(assets/recent-news-2.png);background-size: cover;background-repeat: no-repeat;"></div>
+            <div class="card-content">
+              <span class="news-date">Jan 1, 2020</span>
+              <p class="news-title">Parks & Recreation Departments is Hiring!</p>
+            </div>
+          </div>
+        </div>
+        <button class="callToAction-btn" id="newsBtn">View All News</button>
+      </div>
+    </section>
   
-  <section class="recent-news-container" style="background: url(assets/clearer-dot-gradient.png);background-position: right;background-size: cover;">
-
-    <div class="recent-news-wrapper">
-      <h3 class="news-heading">Recent News</h3>
-      <div class="news-cards">
-        <div class="card-container shadow-sm">
-          <div class="news-img-container" style="background: url(assets/recent-news.png);background-size: cover;background-repeat: no-repeat;"></div>
-          <div class="card-content">
-            <span class="news-date">Jan 6, 2020</span>
-            <p class="news-title">Offices Closed Due to Weather</p>
-          </div>
+    <section class="upcoming-events-container container-fluid">
+      <div class="events-img-container" style="width: 400px; aspect-ratio: 1 / 1;background-color: gray; background: url(assets/events-main-photo.png); background-size: cover;"></div>
+      <div class="events-content-wrapper">
+        <h3 class="events-heading">Upcoming Events</h3>
+        <div class="events-content">
+          <div class="events-date">Jan <span class="date-num">8</span></div>
+          <p class="events-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
         </div>
-        <div class="card-container shadow-sm">
-          <div class="news-img-container" style="background: url(assets/recent-news-1.png);background-size: cover;background-repeat: no-repeat;"></div>
-          <div class="card-content">
-            <span class="news-date">Jan 3, 2020</span>
-            <p class="news-title">Township Awards Ceremony Information</p>
-          </div>
+        <div class="events-content">
+          <div class="events-date">Jan <span class="date-num">10</span></div>
+          <p class="events-text">Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </p>
         </div>
-        <div class="card-container shadow-sm">
-          <div class="news-img-container" style="background: url(assets/recent-news-2.png);background-size: cover;background-repeat: no-repeat;"></div>
-          <div class="card-content">
-            <span class="news-date">Jan 1, 2020</span>
-            <p class="news-title">Parks & Recreation Departments is Hiring!</p>
-          </div>
+        <div class="events-content">
+          <div class="events-date">Jan <span class="date-num">12</span></div>
+          <p class="events-text">Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit </p>
         </div>
+        <button class="callToAction-btn" id="eventsBtn">View All Events</button>
       </div>
-      <button class="callToAction-btn" id="newsBtn">View All News</button>
-    </div>
-
-  </section>
-
-  <section class="upcoming-events-container container-fluid">
-    <div class="events-img-container" style="width: 400px; aspect-ratio: 1 / 1;background-color: gray; background: url(assets/events-main-photo.png); background-size: cover;"></div>
-    <div class="events-content-wrapper">
-      <h3 class="events-heading">Upcoming Events</h3>
-      <div class="events-content">
-        <div class="events-date">Jan <span class="date-num">8</span></div>
-        <p class="events-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+    </section>
+  
+    <footer class="container-fluid d-inline-flex align-items-center justify-content-center">
+      <div class="company-info">
+        <h6 class="brand-name">Pinconning Township, MI</h6>
+        <p class="company-address"><span class="footer-icon"><i class="fa-solid fa-map-location-dot"></i></span>  1751 E. Cody Estey Rd, Pinconning  MI  48650     |     <span class="footer-icon"><i class="fa-solid fa-phone"></i></span>  989-879-4018</p>
       </div>
-      <div class="events-content">
-        <div class="events-date">Jan <span class="date-num">10</span></div>
-        <p class="events-text">Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </p>
+      <div class="addtn-info">
+        <p class="site-engine">Powered by <span class="external-link"><a href="#" id="externalSiteBtn" style="color: #f3e9d2;text-decoration: underline;">Revize.</a></span>, the Government Website Experts</p> 
+        <a href="#login" class="login-link" id="loginBtn">Login</a>
       </div>
-      <div class="events-content">
-        <div class="events-date">Jan <span class="date-num">12</span></div>
-        <p class="events-text">Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit </p>
-      </div>
-      <button class="callToAction-btn" id="eventsBtn">View All Events</button>
-    </div>
-  </section>
-
-  <footer class="container-fluid d-inline-flex align-items-center justify-content-center">
-    <div class="company-info">
-      <h6 class="brand-name">Pinconning Township, MI</h6>
-      <p class="company-address"><span class="footer-icon"><i class="fa-solid fa-map-location-dot"></i></span>  1751 E. Cody Estey Rd, Pinconning  MI  48650     |     <span class="footer-icon"><i class="fa-solid fa-phone"></i></span>  989-879-4018</p>
-    </div>
-    <div class="addtn-info">
-      <p class="site-engine">Powered by <span class="external-link"><a href="#" id="externalSiteBtn" style="color: #f3e9d2;text-decoration: underline;">Revize.</a></span>, the Government Website Experts</p> 
-      <a href="#login" class="login-link" id="loginBtn">Login</a>
-    </div>
-  </footer>
-
-
+    </footer>
+  </main>
+<script>
+  var slider = tns({
+    container: '#slider-content',
+    mode: "carousel",
+    items: 4,
+    nav: false,
+    controlsText: ['<i class="fa fa-angle-left tns-left"></i>','<i class="fa fa-angle-right tns-right"></i>'],
+    responsive: {
+        0: {
+            items: 1
+        },
+        479:{
+            items: 2
+        },
+        767:{
+            items: 2
+        },
+        991:{
+            items: 3
+        },
+        1199:{
+            items:4
+        }
+    }
+  });
+</script>
 <script>
   document.getElementById("toggleNav").addEventListener("click", addNextBtn);
   document.getElementById("nextNav").addEventListener("click", slideNav);
@@ -185,6 +247,5 @@
   
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js" integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
 </body>
 </html>
